@@ -22,11 +22,11 @@ int main(int afg, char * argv) {
 	serv_addr.sin_addr.s_addr=INADDR_ANY; 
 	serv_addr.sin_port=htons(SERV_TCP_PORT); 
 	printf("\nBinded"); 
-	bind(sockfd, (struct sockaddr *) &serv_addr, sizeof(serv_addr)); 
+	bind(sockfd, (struct sockaddr*)&serv_addr, sizeof(serv_addr)); 
 	printf("\nListening..."); 
 	listen(sockfd, 5); 
 	clength=sizeof(cli_addr); 
-	newsockfd=accept(sockfd, (struct sockaddr *) &cli_addr,&clength); 
+	newsockfd=accept(sockfd, (struct sockaddr*) &cli_addr,&clength); 
 	close(sockfd); 
 	read(newsockfd, &str, MAX); 
 	printf("\nClient message\n File Name: %s\n", str); 

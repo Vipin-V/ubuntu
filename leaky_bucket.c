@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 void main()
 {
     int incoming, outgoing, buck_size, n, store = 0;
